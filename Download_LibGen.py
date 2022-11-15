@@ -8,8 +8,8 @@ df_OB = p.read_csv('OB_all.csv',error_bad_lines=False)
 df_Neuro = p.read_csv('Neuro_all.csv',error_bad_lines=False)
 
 DOIs = list(df_Socio['DOI']+df_Psych['DOI']+df_Neuro['DOI']+df_OB['DOI'])
-print(len(DOIs))
-#url = 'https://libgen.lc/ads.php?doi=10.1111/j.1469-7610.1993.tb00964.x'
+# print(len(DOIs))
+# sample url = 'https://libgen.lc/ads.php?doi=10.1111/j.1469-7610.1993.tb00964.x'
 file_num = 0
 for DOI in DOIs:
     base_url = 'https://libgen.rocks/ads.php?doi='
@@ -26,4 +26,3 @@ for DOI in DOIs:
            pdf.close()
            file_num+=1
 
-# 98492 DOIs to search
